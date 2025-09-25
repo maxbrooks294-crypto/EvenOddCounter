@@ -1,0 +1,31 @@
+   public class CountEvenOdd{   // <- class starts here
+    public static void main(String[] args) {   // <- main method starts here
+        // Step 1: Create an array of 100 integers
+        int[] numbers = new int[100];
+
+        // Step 2: Fill the array with numbers 1 to 100
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = i + 1;
+        }
+
+        // Step 3: Declare sum BEFORE the loop
+        int sum = 0;
+
+        // Step 4: Loop through the array and print even/odd
+        for (int i = 0; i < numbers.length; i++) {
+            int num = numbers[i];
+
+            if (num % 2 == 0) {
+                System.out.println(num + "\tEven");
+            } else {
+                System.out.println(num + "\tOdd");
+            }
+
+            // Add to running sum
+            sum += num;
+        }
+
+        // Step 5: Print total sum after the loop
+        System.out.println("Sum of numbers 1 through 100: " + sum);
+    }   // <- closes main
+}   // <- closes class
